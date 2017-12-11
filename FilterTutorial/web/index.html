@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Audio Player</title>
+		<script src="scripts/jquery-3.1.1.min.js"></script>
+		<script src="scripts/player.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+	<div  class="content">
+
+		<div class="audioPlayer">
+			<h1>Audio Player</h1>
+			<audio class="audio" src="songs/StarsandStripes.wav"></audio>
+			<input type="range" id="myRange" value="90" >
+			<div id="musicbar">
+				<table>
+					<tr id="trMusicButtons">
+						<td class="tdWidth" id="tdPlayTrack"><i class="fa fa-play" aria-hidden="true"></i></td>
+						<td class="tdWidth" id="effect1">High Pass</td>
+						<td class="tdWidth" id="effect2">Low Pass</td>
+						<td class="tdWidth" id="effect3">Band Pass</td>
+						<td><canvas id='cvsVisualizer'></canvas></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="filterInfo">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">High Pass</h3>
+				</div>
+				<div class="panel-body">
+						Audio filter that allows only certain high frequencies to pass through after a cut-off
+						point. With a high-pass filter the lower frequencies will be cut off only allowing the upper ranges to pass.
+						These filters are often used in audio mixing to roll off the low frequencies on more upper range
+						instruments such as guitars, horns, and vocal to allow them to stand out in a mix and not bog down the
+						more bass prominent regions of a song.
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Low Pass</h3>
+				</div>
+				<div class="panel-body">
+					Audio filter that only allows frequencies on the lower end of an audio wave to pass
+					through. The higher frequencies will be cut off allowing for a more prominent bass sound to be heard.
+					This is often used in mixing on bass drums, toms, and bass guitars to allow for the most rounded and
+					large sound possible.
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Band Pass</h3>
+				</div>
+				<div class="panel-body">
+					Audio filter used to bypass both high and low frequencies only allowing for the midrange
+					to pass. While high and low pass filters are used to give more bass and treble based
+					instruments prominent in an audio mix, band-pass is used as more of a tool to make room
+					for secondary instruments in the mix. This is done to avoid an overlap in frequencies
+					so all instruments are heard at a audible level.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>

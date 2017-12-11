@@ -1,0 +1,16 @@
+{
+  "name": "filtertutorial",
+  "version": "1.0.0",
+  "description": "Basic Filter Tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mattronome",
+  "licencse": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "material-design-lite": "^1.2.1"
+  }
+}
